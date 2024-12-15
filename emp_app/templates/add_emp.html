@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Office Employee Management System</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Add an Employee</h1>
+      <hr>
+      <form action="/add_emp" method="POST">
+        {%csrf_token%}
+          <label for="first_name" class="form-label">First Name</label><br>
+          <input type="text" class="form-control" id="first_name" aria-describedby="emailHelp" value="{{first_name}}" name="first_name"><br>
+          <hr>
+          <label for="last_name" class="form-label">Last Name</label><br>
+          <input  name="last_name" type="text" class="form-control" id="last_name" value="{{last_name}}"><br>
+          <hr>
+          <label for="salary" class="form-label" >Salary</label><br>
+          <input name="salary" type="number" value="{{salary}}" class="form-control" id="Salary"><br>
+          <hr>
+          <label for="bonus" class="form-label">Bonus</label><br>
+          <input name="bonus" type="number"  value="{{bonus}}" class="form-control" id="bonus"><br>
+          <hr>
+          <label for="dept" class="form-label">Department</label><br>
+          <input name="dept" type="number" value="{{dept}}" class="form-control" id="dept"><br>
+          <hr>
+          <label for="role" class="form-label">Role</label><br>
+          <input name="role" type="number" class="form-control" value="{{role}}" id="role"><br>
+          <hr>
+          <label for="phone" class="form-label">Phone</label><br>
+          <input name="phone" type="text" class="form-control" value="{{phone}}" id="phone"><br>
+          
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+    
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
